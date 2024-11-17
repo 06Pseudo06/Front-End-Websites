@@ -1,0 +1,478 @@
+* { /* Universal selector - it apllies the following property to every element */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+@font-face {
+  font-family:'Montserrat';
+  src: url(Fonts/Montserrat/static/Montserrat-Thin.ttf);
+}
+@font-face {
+  font-family: 'Arcade';
+  src: url(Fonts/Arcade/ARCADECLASSIC.TTF);
+}
+@font-face {
+  font-family: 'Questrial';
+  src:url(Fonts/Questrial/Questrial-Regular.ttf) ;
+}
+@font-face {
+  font-family: 'Minecraft';
+  src:url(Fonts/Minecraft/1_MinecraftRegular1.otf) ;
+}
+
+html, 
+body {
+  height: 10%;
+  width: 100%;
+}
+
+
+
+*::selection {
+ background-color: #fff;
+ color: #95c11e;
+}
+
+
+
+body::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+    background: #95c11e;
+}
+
+body::-webkit-scrollbar-thumb{
+ background-color: #fff;
+ border-radius: 50px;
+}
+
+
+
+body{
+overflow-x: hidden;
+background-image: url("media/bg3.png");
+background-size:cover;
+background-attachment: fixed;
+background-position: center; 
+}
+
+
+
+#nav{ /* For the navigation bar */
+   Height: 120px;
+   width: 100%; 
+    background-color: rgb(15, 14, 14);
+   display: flex; /* to make all the elements in one line */
+   align-items: center;
+   padding: 0 150px ;
+   gap: 100px; /* for spacing between elements*/
+   justify-content: flex-start;
+   position: fixed; /*  to make it fixed at the top and its visible even when we scroll down */
+   z-index: 999; /*  to make it visible on top of other elements */
+ }
+
+#nav img{ /* Logo image */ 
+height: 75px;
+}
+
+#nav h4{
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 1.15vw;
+}
+
+
+
+#main{
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+}
+
+
+
+#page1{
+  height: 100vh; /* viewport height -  it is the height of the browser window */
+  width: 280vh;
+  position: relative;
+  display: flex; /*  to make all the elements in one line , to be more specific to make all the children of the parent class in rows and columns form */
+  align-items: center; /*  to make all the elements vertically aligned */
+  justify-content: center; /* to edit the position of the items in the class */
+  flex-direction: column; /* by default its row, and we needed to be one below other so converted them into columns */
+  text-align: center;
+  z-index: 10;
+}
+
+#page1 h1{
+  font-size:120px ;
+  font-weight: 900;
+  position: relative;
+  font-family: Minecraft;
+}
+#page1 h1::before{
+  content: "Come Join Us" ;
+  position: absolute;
+  color: #000;
+  top: -4px;
+  left: -4px;
+  -webkit-text-stroke: 1px rgb(102, 255, 0);
+  z-index: -1;
+}
+
+#page1 p{
+   font-size: 25px ;
+   font-weight: 500;
+   width: 40%;
+   font-family: Montserrat;
+  }
+
+/* Styles for h2 elements within the #page1 section */
+#page1 h2 {
+  font-size: 50px;                      /* Set the font size to 50 pixels */
+  color: #ebeee8;                       /* Set the text color to a light gray */
+  font-weight: 50;                      /* Set the font weight (50 is generally considered light) */
+  margin-top: 5px;                     /* Add a top margin of 5 pixels */
+  margin-bottom: 15px;                 /* Add a bottom margin of 15 pixels */
+  font-family: Arcade;                  /* Use the 'Arcade' font family for the text */
+  text-align: center;                   /* Center the text horizontally */
+  
+  /* Apply a glowing animation */
+  -webkit-animation: glow 1s ease-in-out infinite alternate; /* For Safari */
+  -moz-animation: glow 1s ease-in-out infinite alternate;    /* For older Firefox versions */
+  animation: glow 1s ease-in-out infinite alternate;          /* Standard syntax */
+}
+
+/* Keyframes for the glowing effect */
+@keyframes glow {
+  from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #6be600; /* Initial glow effect */
+  }
+  to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #b975ed; /* Final glow effect */
+  }
+}
+
+
+#page2 {
+    min-height: 100vh;
+    width: 100%;
+    z-index: 10;
+    margin-bottom: 100px;
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container h3{
+  font-family: Arcade;
+  color: #224702;
+  font-size: 30px;
+}
+
+.container p{
+  font-family: Questrial;
+  color: #000;
+}
+
+.video-div {
+  background-image: linear-gradient(to bottom right, #55bcb8, #072827);
+  border-radius: 10px;
+  padding: 15px;
+  width: 30%;
+  box-shadow: 0 10px 20px rgba(20, 209, 42, 0.2);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.video-div:hover {
+  transform: scale(1.05);
+}
+
+.video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-video {
+  max-width: 80%;
+  max-height: 80%;
+  transition: transform 0.5s ease;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.video-div img {
+  width: 100%;
+  border-radius: 10px;
+  height: 243px;
+}
+
+
+#page3{
+   margin-top: 30px;
+   margin-bottom: 50px;
+   margin-left: 550px;
+   z-index: 10;
+}
+
+.card {
+  width: 540px;
+  height: 554px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #52e010;
+  border-radius: 20px;
+}
+
+.card > * {
+  margin: 0;
+}
+
+.card__title {
+  margin-top: 20px;
+  margin-left: 15px;
+  font-size: 120px;
+  font-weight: 900;
+  color: #f5efef;
+}
+
+.card__content {
+  margin-left: 15px;
+  font-size: 30px;
+  line-height: 30px;
+  margin-bottom: 30px;
+  color: #3f3d3d;
+}
+
+.card__form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card__form input {
+  margin-left: 105px;
+  margin-right: 105px;
+  height: 60px;
+  margin-top: 10px;
+  outline: 0;
+  background: rgb(255, 255, 255);
+  box-shadow: transparent 0px 0px 0px 1px inset;
+  padding: 0.6em;
+  border-radius: 24px;
+  border: 1px solid #333;
+  color: black;
+}
+
+.card__form button {
+  border: 0;
+  margin-left: 105px;
+  margin-right: 105px;
+  height: 60px;
+  background: #111;
+  color: #fff;
+  padding: 0.68em;
+  border-radius: 24px;
+  font-weight: bold;
+}
+
+.sign-up:hover {
+  opacity: 0.8;
+} 
+
+#page2_5{
+  margin-top: 200px;
+  display: flex;
+}
+
+
+
+#textpara{
+  margin-top: 10px;
+  margin-left: 300px;
+  min-height: 100vh;
+  float:right;
+  z-index: 10;
+  width: 500px;
+}
+
+#textpara h2{
+  font-family: Arcade;
+  font-size: 100px;
+  font-weight: 200px;
+}
+
+#textpara p{
+    margin-top: 20px;
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 200px;
+}
+
+
+
+.parent {
+  margin-left: 100px;
+  width: 600px;
+  padding: 20px;
+  perspective: 1000px;
+}
+
+.cool {
+  padding-top: 50px;
+  /* border-radius: 10px; */
+  border: 3px solid #141414;
+  transform-style: preserve-3d;
+  background: linear-gradient(135deg, #0000 18.75%, #f3f3f3 0 31.25%, #0000 0),
+    repeating-linear-gradient(45deg, #f3f3f3 -6.25% 6.25%, #141414 0 18.75%);
+  background-size: 60px 60px;
+  background-position:
+    0 0,
+    0 0;
+  background-color: #141414;
+  width: 100%;
+  box-shadow: rgba(142, 142, 142, 0.3) 0px 30px 30px -10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.cool:hover {
+  background-position:
+    -100px 100px,
+    -100px 100px;
+  transform: rotate3d(0.5, 1, 0, 30deg);
+}
+
+.content-box {
+  background: #8ed500;
+  /* border-radius: 10px 100px 10px 10px; */
+  transition: all 0.5s ease-in-out;
+  padding: 60px 25px 25px 25px;
+  transform-style: preserve-3d;
+}
+
+.content-box .card-title {
+  display: inline-block;
+  color: #141414;
+  font-size: 25px;
+  font-weight: 900;
+  transition: all 0.5s ease-in-out;
+  transform: translate3d(0px, 0px, 50px);
+}
+
+.content-box .card-title:hover {
+  transform: translate3d(0px, 0px, 60px);
+}
+
+.content-box .card-content {
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #141414;
+  transition: all 0.5s ease-in-out;
+  transform: translate3d(0px, 0px, 30px);
+}
+
+.content-box .card-content:hover {
+  transform: translate3d(0px, 0px, 60px);
+}
+
+.content-box .see-more {
+  cursor: pointer;
+  margin-top: 1rem;
+  display: inline-block;
+  font-weight: 900;
+  font-size: 50px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #a2dc2d;
+  /* border-radius: 5px; */
+  background: #141414;
+  padding: 0.5rem 0.7rem;
+  transition: all 0.5s ease-in-out;
+  transform: translate3d(0px, 0px, 20px);
+}
+
+.content-box .see-more:hover {
+  transform: translate3d(0px, 0px, 60px);
+}
+
+.date-box {
+  position: absolute;
+  align-items: center;
+  top: 0px;
+  right: 50px;
+  height: 150px;
+  width: 150px;
+  background: #141414;
+  border: 1px solid #8ed500;
+  /* border-radius: 10px; */
+  padding: 28px;
+  transform: translate3d(0px, 0px, 80px);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 17px 10px -10px;
+}
+
+.date-box span {
+  display: block;
+  text-align: center;
+}
+
+.date-box .month {
+  color: #8ed500;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.date-box .date {
+  font-size: 20px;
+  font-weight: 900;
+  color: #8ed500;
+}
+
+
+#footer {
+  position: fixed;
+  bottom: -100px; /* Initially hide the footer */
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: rgba(116, 217, 14, 0.8); /* Light gray translucent */
+  transition: bottom 0.3s ease; /* Smooth transition */
+  text-align: center;
+  color: #000;
+  font-size: 20px;
+  line-height: 50px; /* Center text vertically */
+}
+
+
+
+
+  

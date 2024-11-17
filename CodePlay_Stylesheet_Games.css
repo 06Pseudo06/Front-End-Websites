@@ -1,0 +1,254 @@
+* { /* Universal selector - it apllies the following property to every element */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+@font-face {
+  font-family:'Montserrat';
+  src: url(Fonts/Montserrat/static/Montserrat-Thin.ttf);
+}
+@font-face {
+  font-family: 'Arcade';
+  src: url(Fonts/Arcade/ARCADECLASSIC.TTF);
+}
+@font-face {
+  font-family: 'Questrial';
+  src:url(Fonts/Questrial/Questrial-Regular.ttf) ;
+}
+@font-face {
+  font-family: 'Minecraft';
+  src:url(Fonts/Minecraft/1_MinecraftRegular1.otf) ;
+}
+
+
+html, 
+body {
+  height: 100%;
+  width: 100%;
+}
+
+
+
+*::selection {
+ background-color: #fff;
+ color: #95c11e;
+}
+
+
+
+body::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+    background: #95c11e;
+}
+
+body::-webkit-scrollbar-thumb{
+ background-color: #fff;
+ border-radius: 50px;
+}
+
+body{
+ overflow-x: hidden;
+}
+
+
+
+#nav{ /* For the navigation bar */
+   Height: 145px;
+   width: 100%; 
+   /* background-color: red; */
+   display: flex; /* to make all the elements in one line */
+   align-items: center;
+   padding: 0 150px ;
+   gap: 100px; /* for spacing between elements*/
+   justify-content: flex-start;
+   position: fixed; /*  to make it fixed at the top and its visible even when we scroll down */
+   z-index: 999; /*  to make it visible on top of other elements */
+ }
+
+#nav img{ /* Logo image */ 
+height: 75px;
+}
+
+#nav h4{
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 1.15vw;
+}
+
+
+
+video {
+     height: 100%;
+     width: 100%;
+     object-fit: cover;
+     position: fixed;
+     z-index: -1 ;
+}
+
+
+
+#main{
+position: relative;
+background-color: rgba(0, 0, 0, 0.37);
+}
+
+
+
+#page1{
+  height: 50vh; /* viewport height -  it is the height of the browser window */
+  width: 100%;
+  position: relative;
+  display: flex; /*  to make all the elements in one line , to be more specific to make all the children of the parent class in rows and columns form */
+  align-items: center; /*  to make all the elements vertically aligned */
+  justify-content: center; /* to edit the position of the items in the class */
+  flex-direction: column; /* by default its row, and we needed to be one below other so converted them into columns */
+  text-align: center;
+  z-index: 10;
+}
+
+#page1 h1{
+  font-family: Arcade;
+  font-size:200px ;
+  font-weight: 900;
+  position: relative;
+}
+
+#page1 h1::before{
+  content: "GAMES" ;
+  position: absolute;
+  color: #000;
+  top: -4px;
+  left: -4px;
+  -webkit-text-stroke: 1px rgb(102, 255, 0);
+  z-index: -1;
+}
+
+
+#page1 p{
+  font-family: Questrial;
+  font-size: 20px ;
+  font-weight: 500;
+  width: 40%;
+ }
+
+
+
+ #page2{
+  margin-top: 100px;
+  min-height: 100vh;
+  width: 100%;
+  z-index: 10;
+ }
+
+
+ .container {
+  display: flex; /* Enable flexbox */
+  justify-content: space-around; /* Space the cards evenly */
+  padding: 20px;
+}
+
+.card {
+  width: 400px;
+  height: 354px;
+  background: #3405a3;
+  border-radius: 15px;
+  box-shadow: 1px 5px 60px 0px #100a886b;
+ }
+ 
+ .card .card-border-top {
+  width: 80%;
+  height: 7%;
+  background: #6b64f3;
+  margin: auto;
+  border-radius: 0px 0px 15px 15px;
+ }
+ 
+ .card span {
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  display: block;
+  padding-top: 10px;
+  font-size: 30px;
+ }
+ 
+ .card .job {
+  font-weight: 400;
+  color: white;
+  display: block;
+  text-align: center;
+  padding-top: 8px;
+  margin-left: 20px;
+  margin-right: 2px;
+  font-size: 15px;
+ }
+ 
+ 
+ .card .img {
+  width: 200px;
+  height: 150px;
+  background: #6b64f3;
+  border-radius: 15px;
+  margin: auto;
+  margin-top: 25px;
+ }
+ .card .img img {
+           height: 120px;
+           width: 170px;
+           margin-top: 15px;
+           margin-left: 15px;
+           border-radius: 10px;
+ }
+
+
+ .card button {
+  padding: 8px 25px;
+  display: block;
+  margin: auto;
+  border-radius: 8px;
+  border: none;
+  margin-top: 30px;
+  background: #6b64f3;
+  color: white;
+  font-weight: 600;
+ }
+ 
+ .card button:hover {
+  background: #201c68;
+ }
+ 
+
+ #page3{
+  margin-top: 100px;
+  min-height: 100vh;
+  width: 100%;
+  z-index: 10;
+ }
+
+
+ #page4{
+  margin-top: 100px;
+  min-height: 100vh;
+  width: 100%;
+  z-index: 10;
+ }
+
+
+
+ #footer {
+  position: fixed;
+  bottom: -100px; /* Initially hide the footer */
+  left: 0;
+  right: 0;
+  height: 50px;
+  background-color: rgba(116, 217, 14, 0.8); /* Light gray translucent */
+  transition: bottom 0.3s ease; /* Smooth transition */
+  text-align: center;
+  color: #000;
+  font-size: 20px;
+  line-height: 50px; /* Center text vertically */
+}

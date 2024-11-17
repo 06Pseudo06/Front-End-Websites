@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel = "stylesheet" href="CodePlay_Stylesheet_Blog.css">
+</head>
+<body>
+<!-- navigation bar -->
+<div id = "nav"> 
+  <img src="media/CodePlay_logo.jpg">
+  <a href="CodePlay_Html_Home.html"><h4>Home</h4></a>
+  <a href="CodePlay_Html_Games.html"><h4>Games</h4></a>
+  <a href="CodePlay_Html_Blog.html"><h4>Blog</h4></a>
+  <a href="CodePlay_Html_Contacts.html"><h4>Contact</h4></a>
+</div>
+<div id="main"
+    <div id="page1">
+      <div id="page1"> 
+        <h1>Come Join Us </h1>
+        <h2> Your Gaming Hub </h2>
+        <p>  Welcome to our blog, where the gaming <br>
+             adventure unfolds! Dive into a world of <br>
+             classic games, from the strategic depths <br>
+             of chess to the thrilling rolls of the <br>
+             dice in Ludo. Discover expert tips and <br>
+             tricks from seasoned players, share your <br>
+             own gaming experiences, and stay updated  <br>
+             on the latest news and updates. Join our <br>
+             vibrant community, connect with fellow <br>
+             gamers, and let the gaming fun begin!  <br>
+        </p>
+      </div>
+    </div>
+    <div id="page2">
+      <div class="container">
+        <div class="video-div" onclick="openModal('video1')">
+            <video id="video1" class="video" controls>
+                <source src="media/worm1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h3>Wormate.io Best</h3>
+            <p>Who needs enemies when you've got an appetite? 🍽️ 
+              Check out my latest Worm.io run! 
+              A thrilling ride through the wormhole!
+              Watch as I devour my opponents, grow larger,
+              and claim the top spot.
+              Join me on this addictive gaming journey!
+              #WormIO #Gaming #RecordBreaker</p>
+        </div>
+    
+        <div class="video-div" onclick="openModal('video2')">
+            <video id="video2" class="video" controls>
+                <source src="media/chess.com analysis be like.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h3>Sneaky Checkmate</h3>
+            <p>A sneaky little trick to checkmate your opponent! ♟️
+              Learn this chess tactic and surprise your friends.
+              Ever wondered how to win a seemingly lost game?
+              This chess trick might just be the answer.
+              Learn this powerful tactic and dominate the board.
+              #Chess #ChessTips #Checkmate</p>
+        </div>
+    
+        <div class="video-div" onclick="openModal('video3')">
+            <img src="media/Game Update 2.O.png" >
+            <h3>A New Era Begins</h3>
+            <p>Get ready to embark on a new adventure in Craftiverse 2.0!
+              This latest update brings exciting new features, including
+              expanded worlds, enhanced crafting systems, and thrilling 
+              challenges. Discover hidden treasures, battle fearsome 
+              creatures, and build your dream world like never before.</p>
+        </div>
+    </div>
+    
+    <!-- Modal for larger video display -->
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <video id="modalVideo" class="modal-video" controls>
+            <source id="modalSource" src="" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <div id="page2_5">
+      <div class="parent">
+        <div class="cool">
+          <div class="content-box">
+            <span class="cool-title">Additon</span>
+            <p class="cool-content">
+              Get ready to dive into a world of endless entertainment! We're constantly adding
+              new games every 4 days to keep your boredom at bay. Our ever-growing library offers
+               a diverse range of games, from classic favorites to the latest indie sensations. 
+               Whether you're a strategy enthusiast, a casual gamer, or an adrenaline junkie,
+              you'll find something to suit your taste. So, what are you waiting for? Start 
+              exploring today! With each update, we bring fresh content that promises to
+              challenge your skills and ignite your passion for gaming. Join a vibrant community 
+              of players who share your interests and compete for high scores, or collaborate
+              on exciting quests. Experience the thrill of discovering hidden gems and 
+              unforgettable adventures that await you at every turn!
+            </p>
+            <span class="see-more"><a href="CodePlay_Html_Games.html">See More</span></a>
+          </div>
+          <div class="date-box">
+            <span class="month">DAYS</span>
+            <span class="date">04</span>
+          </div>
+        </div>
+      </div>
+      <div id="textpara">
+          <h2>Level Up</h2>
+          <p>Welcome to our blog page, your ultimate destination for endless gaming excitement!
+             We’re thrilled to keep you entertained with fresh updates and new games added every
+            4th day, so there’s always something new to explore. Whether you’re here to kill boredom,
+            challenge yourself, or simply relax, our ever-expanding library of games has something for
+            everyone. From strategic puzzles and thrilling action games to casual arcade fun and immersive
+            adventures, we’re building a diverse collection across multiple genres. Our goal is to bring
+            you the best and keep your gaming experience fresh and exciting! Check back often for the latest
+            additions, exclusive updates, and tips on maximizing your playtime. Dive in, and let the fun begin!
+            <p>
+     </div>
+    </div>
+    <div id="page3">
+      <div class="card">
+        <span class="card__title">Subscribe</span>
+        <p class="card__content">Stay updated with the latest news, tips, and tricks.
+                                 Join our community and unlock the exclusive perks.
+                                 Subscribe to our one-only newsletter and never miss a beat of game.
+        </p>
+        <div class="card__form">
+            <input placeholder="Your Email" type="text">
+            <button class="sign-up"> Sign up</button>
+        </div>
+    </div>
+  </div>
+</div>
+<footer id="footer">
+  © All Cpyrights Owned By K
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="CodePlay_Script_Blog.js"></script>
+</body>
+
+</html>

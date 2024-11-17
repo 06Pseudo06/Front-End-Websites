@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "montserrat";
+  color: #fff;
+}
+
+@font-face {
+  font-family:'Montserrat';
+  src: url(Fonts/Montserrat/static/Montserrat-Thin.ttf);
+}
+@font-face {
+  font-family: 'Arcade';
+  src: url(Fonts/Arcade/ARCADECLASSIC.TTF);
+}
+@font-face {
+  font-family: 'Questrial';
+  src:url(Fonts/Questrial/Questrial-Regular.ttf) ;
+}
+@font-face {
+  font-family: 'Minecraft';
+  src:url(Fonts/Minecraft/1_MinecraftRegular1.otf) ;
+}
+
+
+
+html,
+body {
+  height: 100%;
+
+  width: 100%;
+}
+*::selection {
+  background-color: #fff;
+  color: #95c11e;
+}
+
+body::-webkit-scrollbar {
+  display: block;
+  width: 8px;
+  background: #95c11e;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #fff;
+
+  border-radius: 50px;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+
+
+#nav{ /* For the navigation bar */
+  Height: 150px;
+  width: 100%; 
+  /* background-color: red; */
+  display: flex; /* to make all the elements in one line */
+  align-items: center;
+  padding: 0 150px ;
+  gap: 100px; /* for spacing between elements*/
+  justify-content: flex-start;
+  position: fixed; /*  to make it fixed at the top and its visible even when we scroll down */
+  z-index: 999; /*  to make it visible on top of other elements */
+}
+
+#nav img{ /* Logo image */ 
+height: 75px;
+}
+
+#nav h4{
+ text-transform: uppercase;
+ font-weight: 500;
+ cursor: pointer;
+ font-size: 1.15vw;
+}
+
+
+
+video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: fixed;
+  z-index: -1 ;
+}
+
+
+
+#page3 {
+  height: 100vh;
+  width: 100%;
+  /* background-color: #000; */
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+
+#page3 p {
+  font-size: 35px;
+  font-weight: 700;
+  width: 60%;
+  line-height: 45px;
+  text-align: center;
+}
+
+#page3 img {
+  position: absolute;
+  height: 60px;
+}
+
+#page3 #colon1 {
+  left: 15%;
+  top: 25%;
+}
+
+#page3 #colon2 {
+  bottom: 30%;
+  right: 15%;
+}
+
+
+
+#page4 {
+  height: 40vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  position: relative;
+}
+
+.elem {
+  height: 70%;
+  width: 25%;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+}
+
+.elem h2 {
+  height: 100%;
+  width: 100%;
+  background-color: #a9e317;
+  display: flex;
+  color: #010101;
+  font-weight: 900;
+  align-items: center;
+  justify-content: center;
+  transition: all ease 0.5s;
+  font-size: 2vw;
+  position: absolute;
+  z-index: 10;
+  font-family: Aharoni;
+}
+
+.elem img {
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+  object-fit: cover;
+  transition: all ease 0.5s;
+  scale: 1.1;
+}
+
+.elem:hover h2 {
+  font-family: Aharoni;
+  color: #5ef009;
+  background-color: transparent;
+}
+
+.elem:hover img {
+  scale: 1;
+}
+
+
+
+#page4 h1 {
+  font-size: 5.0vw;
+  position: absolute;
+  top: -60%;
+  font-weight: 900;
+  font-family: gilroy;
+  color: #000;
+  -webkit-text-stroke: 2px #ffffff;
+  background-color: transparent;
+}
+
+
+
+#footer {
+  height: 40vh;
+  width: 100%;
+  background: linear-gradient(to left bottom, #119f3a 0%, #a3d421 80%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6.5vw;
+  padding: 0 100px;
+  transition: bottom 0.3s ease; /* Smooth transition */
+}
+#footer > img {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  z-index: 0;
+}
+
+#f1 img {
+  height: 100px;
+}
+
+#f1,
+#f2,
+#f3,
+#f4 {
+  width: fit-content;
+  position: relative;
+  z-index: 99;
+  /* background-color: red; */
+}
+
+#f2 h3 {
+  font-size: 1.6vw;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: #000000;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+#f3 h3 {
+  font-size: 1.6vw;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+#f4 h4 {
+  font-size: 1vw;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 600;
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+
+
